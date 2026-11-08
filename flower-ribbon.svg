@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="140" viewBox="0 0 650 140" fill="none">
+  <defs>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7D9DF"/><stop offset="1" stop-color="#D9899A"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E0E6F4"/><stop offset="1" stop-color="#91A6C8"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C8D1B9"/><stop offset="1" stop-color="#819477"/></linearGradient>
+    <linearGradient id="peach" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F9E1C5"/><stop offset="1" stop-color="#E7A66D"/></linearGradient>
+  </defs>
+
+  <g transform="translate(-40 0)">
+  <!-- Tulips -->
+  <g stroke="#87977A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 136C100 105 94 85 92 56M100 136C104 99 112 79 118 59M98 121C82 106 73 100 65 97"/>
+    <path d="M99 122C91 105 77 100 65 97C69 111 83 122 99 122Z" fill="url(#leaf)" stroke="none"/>
+    <path d="M103 119C107 99 118 91 128 86C126 102 117 115 103 119Z" fill="url(#leaf)" stroke="none"/>
+  </g>
+  <path d="M92 60C83 51 84 36 91 28C93 37 98 40 100 46C102 39 108 34 111 28C119 39 116 53 105 61L100 54Z" fill="url(#pink)" stroke="#C6818D" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M117 63C111 53 115 39 122 34C123 43 128 45 130 53C134 46 139 43 143 40C147 51 141 63 130 67L125 61Z" fill="#E9B4BC" stroke="#C6818D" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(-110 0)">
+  <!-- Blue forget-me-nots -->
+  <g stroke="#87977A" stroke-width="2.2" stroke-linecap="round">
+    <path d="M300 136C301 107 297 81 288 58M300 119C315 95 325 78 326 55M299 110C285 91 276 78 273 67"/>
+    <path d="M298 124C282 117 272 118 262 124C276 131 288 132 298 124Z" fill="url(#leaf)" stroke="none"/>
+    <path d="M303 114C315 108 324 108 335 113C324 122 313 122 303 114Z" fill="url(#leaf)" stroke="none"/>
+  </g>
+  <g fill="url(#blue)" stroke="#91A6C8" stroke-width="1.3">
+    <circle cx="281" cy="50" r="7"/><circle cx="294" cy="45" r="7"/><circle cx="306" cy="52" r="7"/><circle cx="292" cy="59" r="7"/>
+    <circle cx="319" cy="44" r="7"/><circle cx="331" cy="39" r="7"/><circle cx="339" cy="49" r="7"/><circle cx="326" cy="56" r="7"/>
+    <circle cx="266" cy="61" r="6"/><circle cx="278" cy="63" r="6"/><circle cx="273" cy="74" r="6"/>
+  </g>
+  <g fill="#E7C982"><circle cx="294" cy="51" r="2.4"/><circle cx="327" cy="46" r="2.4"/><circle cx="273" cy="65" r="2"/></g>
+  </g>
+
+  <g transform="translate(-180 0)">
+  <!-- Loose rose -->
+  <g stroke="#87977A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M500 136C499 110 495 91 493 70M500 117C514 101 520 91 523 81M497 112C486 100 478 95 469 93"/>
+    <path d="M497 121C482 113 472 115 463 121C477 130 489 129 497 121Z" fill="url(#leaf)" stroke="none"/>
+    <path d="M503 110C515 104 524 105 533 111C524 119 513 119 503 110Z" fill="url(#leaf)" stroke="none"/>
+  </g>
+  <path d="M493 76C481 72 478 61 486 54C480 44 488 35 498 38C505 29 517 34 517 43C528 46 529 58 520 63C519 74 507 79 500 71C497 76 495 77 493 76Z" fill="url(#pink)" stroke="#C6818D" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M491 57C498 50 510 49 518 56C510 56 505 60 501 67C500 61 496 58 491 57Z" fill="#F8E8E7" stroke="#CB929A" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(-250 0)">
+  <!-- Daisies -->
+  <g stroke="#87977A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M700 136C700 110 695 88 691 69M701 117C710 98 718 86 725 78M699 112C688 99 680 93 672 91"/>
+    <path d="M698 124C686 116 677 117 669 122C680 131 691 131 698 124Z" fill="url(#leaf)" stroke="none"/>
+  </g>
+  <g fill="#F5D783" stroke="#D5B567" stroke-width="1.2">
+    <ellipse cx="691" cy="51" rx="5" ry="12"/><ellipse cx="691" cy="51" rx="5" ry="12" transform="rotate(45 691 51)"/><ellipse cx="691" cy="51" rx="5" ry="12" transform="rotate(90 691 51)"/><ellipse cx="691" cy="51" rx="5" ry="12" transform="rotate(135 691 51)"/>
+    <ellipse cx="725" cy="61" rx="4" ry="10"/><ellipse cx="725" cy="61" rx="4" ry="10" transform="rotate(45 725 61)"/><ellipse cx="725" cy="61" rx="4" ry="10" transform="rotate(90 725 61)"/><ellipse cx="725" cy="61" rx="4" ry="10" transform="rotate(135 725 61)"/>
+  </g>
+  <g fill="#A87959"><circle cx="691" cy="51" r="4"/><circle cx="725" cy="61" r="3.5"/></g>
+  </g>
+
+  <g transform="translate(-320 0)">
+  <!-- Branch with tiny blossoms -->
+  <g stroke="#87977A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M900 136C898 108 903 86 913 64M902 111C888 96 881 82 880 69M904 96C919 85 927 74 930 59M909 75C905 59 907 46 912 35"/>
+    <path d="M895 104C885 102 878 106 873 112C884 116 891 113 895 104Z" fill="url(#leaf)" stroke="none"/>
+    <path d="M914 90C925 89 932 94 936 101C925 104 918 99 914 90Z" fill="url(#leaf)" stroke="none"/>
+    <path d="M907 60C897 55 893 48 893 42C903 43 908 49 907 60Z" fill="url(#leaf)" stroke="none"/>
+  </g>
+  <g fill="#EABFC5" stroke="#C9939B" stroke-width="1.4">
+    <circle cx="910" cy="30" r="6"/><circle cx="920" cy="36" r="6"/><circle cx="910" cy="42" r="6"/>
+    <circle cx="879" cy="63" r="5"/><circle cx="888" cy="69" r="5"/><circle cx="879" cy="75" r="5"/>
+    <circle cx="929" cy="53" r="5"/><circle cx="938" cy="59" r="5"/><circle cx="929" cy="65" r="5"/>
+  </g>
+  <g fill="#E6C881"><circle cx="913" cy="36" r="2"/><circle cx="882" cy="69" r="1.7"/><circle cx="932" cy="59" r="1.7"/></g>
+  </g>
+</svg>

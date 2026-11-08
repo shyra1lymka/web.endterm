@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Us | Petal &amp; Pour</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Petal <span>&amp;</span> Pour</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">Our Story</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="visit.html">Menu &amp; Flowers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn btn-petal" href="#booking">Plan a Visit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="flower-divider" aria-hidden="true"></div>
+
+    <main>
+        <section class="hero visit-hero">
+            <div class="container text-center">
+                <p class="eyebrow">SOMETHING LOVELY IS WAITING</p>
+                <h1>Your little corner<br><span>of happiness.</span></h1>
+                <p class="hero-text mx-auto">Sip something delicious, find your favorite flowers, and make an ordinary day feel special.</p>
+                <a href="#collection" class="btn btn-petal">Explore our collection</a>
+            </div>
+        </section>
+
+        <section class="section-space" id="collection">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <p class="eyebrow">FRESHLY MADE WITH LOVE</p>
+                    <h2>A little something for you</h2>
+                    <p>Find a cozy drink, a book for a slow afternoon, or flowers to brighten your table.</p>
+                </div>
+                <div class="collection-tools">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-7">
+                            <label class="form-label" for="searchItems">Search the collection</label>
+                            <input class="form-control" type="search" id="searchItems" placeholder="Try latte, flowers, or book" autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label class="form-label" for="categoryFilter">Show me</label>
+                            <select class="form-select" id="categoryFilter">
+                                <option value="all">Everything lovely</option>
+                                <option value="coffee">Coffee &amp; tea</option>
+                                <option value="flowers">Fresh flowers</option>
+                                <option value="books">Little reads</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="favorite-filter" id="favoritesOnly" type="button" aria-pressed="false">♡ Show saved treats</button>
+<div class="extra-options"><label class="form-label" for="sortItems">Sort the collection</label><select class="form-select" id="sortItems"><option value="featured">Our favorites first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A to Z</option></select></div>
+<div class="row g-4 mt-2" id="productList" aria-live="polite"></div>
+                <p class="empty-message text-center" id="emptyMessage" hidden>Nothing in the collection matches that search. Try another word or category.</p>
+
+                <aside class="basket-box mt-5" aria-live="polite">
+                    <div><p class="eyebrow mb-1">YOUR LITTLE BASKET</p><p class="mb-0"><span id="basketCount">0</span> treats tucked in</p></div>
+                    <strong>Total: <span id="basketTotal">0</span> ₸</strong>
+                </aside>
+            </div>
+        </section>
+
+        <section class="flower-collection section-space" id="hours">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <p class="eyebrow">A FEW THINGS TO KNOW</p>
+                    <h2>Make yourself at home</h2>
+                    <p>Come for a quick coffee or stay for a slower kind of afternoon.</p>
+                </div>
+                <div class="hours-box visit-hours">
+                    <span>MON – FRI</span><strong>8:00 AM – 8:00 PM</strong>
+                    <span>SAT – SUN</span><strong>9:00 AM – 9:00 PM</strong>
+                </div>
+                <div class="faq-card">
+                    <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faqAnswer">Can I pick up flowers with my coffee? <span aria-hidden="true">＋</span></button>
+                    <div class="faq-answer" id="faqAnswer" hidden><p>Of course. Choose a bouquet from our collection and tell us your preferred date in the visit form. We’ll have it ready with your favorite drink.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section section-space" id="booking">
+            <div class="container">
+                <div class="row justify-content-center"><div class="col-lg-8">
+                    <div class="booking-card">
+                        <div class="section-heading text-center">
+                            <p class="eyebrow">LET'S MAKE IT SPECIAL</p>
+                            <h2>Save yourself a little joy</h2>
+                            <p>Reserve a table or tell us about the flowers you’d love to order.</p>
+                        </div>
+                        <div class="success-message" id="successMessage" role="status" hidden>Thank you, <span id="successName"></span>! Your request is ready. We look forward to seeing you.</div>
+                        <form id="bookingForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6"><label class="form-label" for="customerName">Your name</label><input class="form-control" id="customerName" name="customerName" autocomplete="name" required aria-describedby="nameError"><small class="field-error" id="nameError"></small></div>
+                                <div class="col-md-6"><label class="form-label" for="email">Email address</label><input class="form-control" id="email" name="email" type="email" autocomplete="email" required aria-describedby="emailError"><small class="field-error" id="emailError"></small></div>
+                                <div class="col-md-6"><label class="form-label" for="phone">Phone number</label><input class="form-control" id="phone" name="phone" type="tel" placeholder="+7 700 123 45 67" autocomplete="tel" required aria-describedby="phoneError"><small class="field-error" id="phoneError"></small></div>
+                                <div class="col-md-6"><label class="form-label" for="service">What would you like?</label><select class="form-select" id="service" name="service" required aria-describedby="serviceError"><option value="">Choose one</option><option value="table">A table for coffee</option><option value="flowers">A flower order</option><option value="both">Coffee and flowers</option></select><small class="field-error" id="serviceError"></small></div>
+                                <div class="col-md-6"><label class="form-label" for="date">Preferred date</label><input class="form-control" id="date" name="date" type="date" required aria-describedby="dateError"><small class="field-error" id="dateError"></small></div>
+                                <div class="col-md-6"><label class="form-label" for="guests">Number of guests</label><input class="form-control" id="guests" name="guests" type="number" min="1" max="12" required aria-describedby="guestsError"><small class="field-error" id="guestsError"></small></div>
+                                <div class="col-12"><label class="form-label" for="message">A little note <span class="optional-label">(optional)</span></label><textarea class="form-control" id="message" name="message" rows="3" maxlength="250" placeholder="A favorite bouquet, a birthday, or a window seat…"></textarea></div>
+                                <div class="col-12 text-center mt-4"><button class="btn btn-petal" type="submit">Send your request</button></div>
+                            </div>
+                        </form>
+                        <p class="form-note text-center">All fields except the note are required. This demo keeps your request on this page.</p>
+                    </div>
+                </div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container">
+        <div class="footer-content"><div><a href="index.html" class="footer-brand">Petal &amp; Pour</a><p>A little coffee, a little flower magic.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="index.html#about">Our Story</a><a href="visit.html" aria-current="page">Menu &amp; Flowers</a></div></div>
+        <div class="footer-bottom"><p>© 2026 Petal &amp; Pour. Made with love.</p></div>
+    </div></footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const products = [
+            { name: "Rose Vanilla Latte", category: "coffee", description: "Espresso, silky milk, and a soft rose-vanilla finish.", price: 1900, image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85", alt: "A creamy iced latte in a glass" },
+                        { name: "Honey Cappuccino", category: "coffee", description: "A cozy cappuccino with local honey and cinnamon.", price: 1800, image: "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=700&q=85", alt: "A warm cappuccino topped with milk foam" },
+            { name: "Strawberry Matcha", category: "coffee", description: "Earthy matcha layered over sweet strawberry milk.", price: 2000, image: "https://images.unsplash.com/photo-1717603545758-88cc454db69b?auto=format&fit=crop&w=700&q=85", alt: "A glass of iced matcha latte on a wooden table" },
+            { name: "Lavender Lemon Tea", category: "coffee", description: "Bright lemon tea with a gentle lavender note.", price: 1500, image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=85", alt: "A cup of freshly brewed tea" },
+            { name: "Blush Dreams", category: "flowers", description: "Soft pink seasonal blooms wrapped in blush paper.", price: 10000, image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=85", alt: "A bouquet of soft pink flowers" },
+            { name: "Little Wildflower", category: "flowers", description: "A playful mix of fresh, colorful seasonal flowers.", price: 7000, image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=700&q=85", alt: "A loose arrangement of colorful wildflowers" },
+            { name: "Sunday Bouquet", category: "flowers", description: "A thoughtful bunch of cheerful blooms for any day.", price: 8500, image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=700&q=85", alt: "A hand-tied bouquet of fresh flowers" },
+            { name: "The Flower Keeper", category: "books", description: "A gentle illustrated guide to keeping blooms happy.", price: 5500, image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=85", alt: "A stack of books ready for a quiet afternoon" }
+        ];
+                const favorites = new Set();
+const basket = [];
+
+        function renderProducts() {
+            const query = $("#searchItems").val().trim().toLowerCase();
+            const category = $("#categoryFilter").val();
+            const matches = products.filter(function (item) {
+                return (category === "all" || item.category === category) && (item.name + " " + item.description).toLowerCase().includes(query) && ($("#favoritesOnly").attr("aria-pressed") !== "true" || favorites.has(item.name));
+            });
+            matches.sort(function (a, b) { const mode = $("#sortItems").val(); if (mode === "low") return a.price - b.price; if (mode === "high") return b.price - a.price; if (mode === "az") return a.name.localeCompare(b.name); return 0; });
+            const $list = $("#productList").empty();
+            matches.forEach(function (item) {
+                const $card = $("<article>").addClass("menu-card product-card");
+                const $image = $("<img>").attr({ src: item.image, alt: item.alt, loading: "lazy" });
+                const $content = $("<div>").addClass("menu-card-content");
+                $("<p>").addClass("eyebrow").text(item.category === "coffee" ? "SIP SLOWLY" : item.category === "flowers" ? "FRESH BLOOMS" : "A LITTLE READ").appendTo($content);
+                $("<h3>").text(item.name).appendTo($content);
+                $("<p>").text(item.description).appendTo($content);
+                $("<p>").addClass("price").text(item.price.toLocaleString("en-US") + " ₸").appendTo($content);
+                $("<button>").attr({ type: "button", "data-favorite": item.name, "aria-pressed": favorites.has(item.name) }).addClass("save-button").text(favorites.has(item.name) ? "♥ Saved" : "♡ Save for later").appendTo($content);
+                $("<button>").attr({ type: "button", "data-product": item.name }).addClass("btn btn-outline-petal add-button").text("Add to basket").appendTo($content);
+                $card.append($image, $content);
+                $("<div>").addClass("col-sm-6 col-lg-3").append($card).appendTo($list);
+            });
+            $("#emptyMessage").prop("hidden", matches.length !== 0);
+        }
+
+        function updateBasket() {
+            const total = basket.reduce(function (sum, item) { return sum + item.price; }, 0);
+            $("#basketCount").text(basket.length);
+            $("#basketTotal").text(total.toLocaleString("en-US"));
+        }
+
+        $(function () {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has("search")) $("#searchItems").val(params.get("search"));
+            renderProducts();
+            $("#searchItems").on("input", renderProducts);
+            $("#categoryFilter").on("change", renderProducts);
+            $("#favoritesOnly").on("click", function () { const showing = $(this).attr("aria-pressed") !== "true"; $(this).attr("aria-pressed", showing).toggleClass("selected", showing).text(showing ? "♥ Showing saved treats" : "♡ Show saved treats"); renderProducts(); });
+            $("#productList").on("click", ".save-button", function () { const name = $(this).attr("data-favorite"); if (favorites.has(name)) favorites.delete(name); else favorites.add(name); renderProducts(); });
+            $("#sortItems").on("change", renderProducts);
+            $("#productList").on("click", ".add-button", function () {
+                const picked = products.find(function (item) { return item.name === $(this).attr("data-product"); }.bind(this));
+                if (picked) { basket.push(picked); updateBasket(); }
+                const $button = $(this);
+                $button.stop(true, true).text("Added ✓").prop("disabled", true).fadeTo(120, 0.65, function () {
+                    $button.fadeTo(120, 1, function () { $button.text("Add to basket").prop("disabled", false); });
+                });
+            });
+            $(".faq-toggle").on("click", function () {
+                const $answer = $("#faqAnswer");
+                const opening = $answer.is(":hidden");
+                $(this).attr("aria-expanded", opening).find("span").text(opening ? "−" : "＋");
+                $answer.stop(true, true).slideToggle(180);
+            });
+            $("a[href^='#']").on("click", function (event) {
+                const target = $(this).attr("href");
+                if (target.length > 1 && $(target).length) {
+                    event.preventDefault();
+                    $("html, body").stop(true).animate({ scrollTop: $(target).offset().top - 20 }, 300);
+                }
+            });
+
+            const today = new Date();
+            $("#date").attr("min", new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10));
+            const rules = {
+                customerName: function (value) { return value.trim().length >= 2 ? "" : "Please enter at least 2 characters."; },
+                email: function (value) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? "" : "Enter a valid email address."; },
+                phone: function (value) { return /^\+?[0-9\s().-]{7,20}$/.test(value) && value.replace(/\D/g, "").length >= 7 ? "" : "Enter a phone number with at least 7 digits."; },
+                service: function (value) { return value ? "" : "Please choose what you would like."; },
+                date: function (value) { return value && value >= $("#date").attr("min") ? "" : "Choose today or a future date."; },
+                guests: function (value) { return Number(value) >= 1 && Number(value) <= 12 ? "" : "Choose between 1 and 12 guests."; }
+            };
+            function validateField(id) {
+                const $field = $("#" + id);
+                const error = rules[id]($field.val() || "");
+                $("#" + id + "Error").text(error);
+                $field.toggleClass("is-invalid", Boolean(error)).attr("aria-invalid", Boolean(error));
+                return !error;
+            }
+            Object.keys(rules).forEach(function (id) {
+                $("#" + id).on("input change", function () { validateField(id); });
+            });
+            $("#bookingForm").on("submit", function (event) {
+                event.preventDefault();
+                let valid = true;
+                Object.keys(rules).forEach(function (id) { if (!validateField(id)) valid = false; });
+                if (!valid) { $(".is-invalid").first().trigger("focus"); return; }
+                $("#successName").text($("#customerName").val().trim());
+                this.reset();
+                $(".field-error").text("");
+                $(".form-control, .form-select").removeClass("is-invalid").removeAttr("aria-invalid");
+                $("#successMessage").stop(true, true).hide().prop("hidden", false).slideDown(220);
+            });
+        });
+    </script>
+<div class="cat-guide"><button class="cat-toggle" type="button" aria-expanded="false" aria-controls="catPanel"><span aria-hidden="true">🐱</span><span>Ask Poppy</span></button><div class="cat-panel" id="catPanel" hidden><p class="eyebrow">HI, I’M POPPY</p><p>I can help you find a treat or plan a visit.</p><a href="visit.html#collection">Browse drinks, flowers &amp; books</a><a href="visit.html#booking">Book a table or order flowers</a></div></div>
+<script>document.querySelectorAll(".cat-toggle").forEach(function(button){button.addEventListener("click",function(){const panel=document.querySelector("#catPanel");const opening=panel.hidden;panel.hidden=!opening;button.setAttribute("aria-expanded",opening);});});</script>
+</body>
+</html>
